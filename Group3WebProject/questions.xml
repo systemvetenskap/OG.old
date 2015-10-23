@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bank>
+  <question value="1" part="1">
+    <txt>Vart ligger Sverige </txt>
+    <qone id="1" answ="true">Skandinavien</qone>
+    <qtwo id="2" answ="false">Västra Europa</qtwo>
+    <qthree id="3" answ="false">Södra Europa</qthree>
+    <qfour id="4" answ="false">Öst Europa</qfour>
+  </question>
+  <question value="2" part="1">
+    <txt>Vart ligger Norge </txt>
+    <qone id="1" answ="true">Skandinavien</qone>
+    <qtwo id="2" answ="false">Västra Europa</qtwo>
+    <qthree id="3" answ="false">Södra Europa</qthree>
+    <qfour id="4" answ="false">Öst Europa</qfour>
+  </question>
+  <question value="3" part="1">
+    <txt>Vart ligger Tyskland </txt>
+    <qone id="1" answ="false">Skandinavien</qone>
+    <qtwo id="2" answ="false">Västra Europa</qtwo>
+    <qthree id="3" answ="true">Mellersta Europa</qthree>
+    <qfour id="4" answ="false">Öst Europa</qfour>
+  </question>
+  <question value="4" part="2">
+    <txt>Var härör saab ifrån?</txt>
+    <qone id="1" answ="false">Tyskland</qone>
+    <qtwo id="2" answ="false">Österrike</qtwo>
+    <qthree id="3" answ="false">Norge</qthree>
+    <qfour id="4" answ="true">Sverige</qfour>
+  </question>
+  <question value="5" part="2">
+    <txt>Var härör Seat ifrån?</txt>
+    <qone id="1" answ="false">Tyskland</qone>
+    <qtwo id="2" answ="false">Österrike</qtwo>
+    <qthree id="3" answ="false">Norge</qthree>
+    <qfour id="4" answ="true">Spanien</qfour>
+  </question>
+  <question value="6" part="2">
+    <txt>Var härör Ford ifrån?</txt>
+    <qone id="1" answ="false">Tyskland</qone>
+    <qtwo id="2" answ="true">USA</qtwo>
+    <qthree id="3" answ="false">Norge</qthree>
+    <qfour id="4" answ="false">Spanien</qfour>
+  </question>
+</bank>

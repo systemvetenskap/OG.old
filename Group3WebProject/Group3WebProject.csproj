@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="questions.xml" />
     <Content Include="Web.config" />
     <Content Include="webbtest.aspx" />
     <Content Include="webbtestquestion.aspx" />
