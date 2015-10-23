@@ -21,8 +21,8 @@ namespace Group3WebProject
                 Classes.clsTestMenuFill aa = new Classes.clsTestMenuFill();
                 alque.DataValueField = "id";
                 alque.DataTextField = "name";
-                alque.DataSource = aa.read();
-                Debug.WriteLine(aa.read().Rows.Count.ToString());
+                alque.DataSource = aa.read(Server.MapPath("~/questions.xml"));
+                Debug.WriteLine(aa.read(Server.MapPath("~/questions.xml")).Rows.Count.ToString());
 
                 alque.DataBind();
                 if (alque.Items.Count > 0)
@@ -96,7 +96,7 @@ namespace Group3WebProject
         private DataTable fillQuestions(string questionID)//Bara en nästling som går att flytta bort 
         {
             Classes.clsFillQuestion aa = new Classes.clsFillQuestion();
-            return aa.readXML(questionID);
+            return aa.readXML(questionID, Server.MapPath("~/questions.xml"));
         }
         protected void queston_Unload(object sender, EventArgs e)
         {

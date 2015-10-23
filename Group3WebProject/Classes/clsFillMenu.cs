@@ -10,7 +10,7 @@ namespace Group3WebProject.Classes
 {
     public class clsFillMenu
     {
-        public DataTable readXML(string qID)
+        public DataTable readXML(string qID, string xmlPath)
         {
             Debug.WriteLine("Aa");
             DataTable dt = new DataTable();           
@@ -18,7 +18,8 @@ namespace Group3WebProject.Classes
             dt.Columns.Add("id");
             try
             {
-                XmlTextReader reader = new XmlTextReader(@"C:\Users\THEBEAST\Documents\Visual Studio 2013\Projects\WebbenAreHard\WebbenAreHard\question1.xml");
+                
+                XmlTextReader reader = new XmlTextReader(xmlPath);
                 while (reader.Read())
                 {
                     switch (reader.Name)

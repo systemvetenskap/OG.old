@@ -15,10 +15,5 @@ namespace Group3WebProject
 
         }
 
-        private string XmlPath()
-        {
-            string xmlPath = Server.MapPath("~/questions.xml");
-            return xmlPath;
-        }
     }
 }

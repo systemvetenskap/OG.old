@@ -9,7 +9,7 @@ namespace Group3WebProject.Classes
 {
     public class clsFillQuestion
     {
-        public DataTable readXML(string qID)
+        public DataTable readXML(string qID, string xmlPath)
         {
             DataTable dt = new DataTable();
             string quest = "";
@@ -18,7 +18,7 @@ namespace Group3WebProject.Classes
             dt.Columns.Add("id");
             try
             {
-                XmlTextReader reader = new XmlTextReader(@"D:\dokument\question1.xml");
+                XmlTextReader reader = new XmlTextReader(xmlPath);
                 while (reader.Read())
                 {
                     switch (reader.Name)

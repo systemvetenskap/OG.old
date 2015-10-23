@@ -9,7 +9,7 @@ namespace Group3WebProject.Classes
 {
     public class clsTestMenuFill
     {
-        public DataTable read()
+        public DataTable read(string xmlPath)
         {
             Debug.WriteLine("Nu har vi kommit in ");
             DataTable dt = new DataTable();
@@ -17,7 +17,7 @@ namespace Group3WebProject.Classes
             dt.Columns.Add("id");
             try
             {
-                XmlTextReader reader = new XmlTextReader(@"D:\dokument\question1.xml");
+                XmlTextReader reader = new XmlTextReader(xmlPath);
                 while (reader.Read())
                 {
                     switch (reader.Name)

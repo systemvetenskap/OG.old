@@ -10,3 +10,9 @@ C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebPr
 C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\obj\Debug\Group3WebProject.csprojResolveAssemblyReference.cache
 C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\obj\Debug\Group3WebProject.dll
 C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\obj\Debug\Group3WebProject.pdb
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\obj\Debug\Group3WebProject.csprojResolveAssemblyReference.cache
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\obj\Debug\Group3WebProject.dll
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Group3WebProject.dll.config
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Group3WebProject.dll
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Group3WebProject.pdb
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\obj\Debug\Group3WebProject.pdb
