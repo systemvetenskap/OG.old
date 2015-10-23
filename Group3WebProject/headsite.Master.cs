@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace Group3WebProject
 {
@@ -12,6 +13,12 @@ namespace Group3WebProject
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private string XmlPath()
+        {
+            string xmlPath = Server.MapPath("~/questions.xml");
+            return xmlPath;
         }
     }
 }

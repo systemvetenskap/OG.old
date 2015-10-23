@@ -4,3 +4,9 @@ C:\Users\THEBEAST\Documents\Visual Studio 2013\Projects\Group3WebProject\Group3W
 C:\Users\THEBEAST\Documents\Visual Studio 2013\Projects\Group3WebProject\Group3WebProject\obj\Debug\Group3WebProject.dll
 C:\Users\THEBEAST\Documents\Visual Studio 2013\Projects\Group3WebProject\Group3WebProject\obj\Debug\Group3WebProject.pdb
 C:\Users\THEBEAST\Documents\Visual Studio 2013\Projects\Group3WebProject\Group3WebProject\obj\Debug\Group3WebProject.csprojResolveAssemblyReference.cache
+C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\bin\Group3WebProject.dll.config
+C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\bin\Group3WebProject.dll
+C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\bin\Group3WebProject.pdb
+C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\obj\Debug\Group3WebProject.csprojResolveAssemblyReference.cache
+C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\obj\Debug\Group3WebProject.dll
+C:\Users\Andreas\MIUN\Interaktiva webbapplikationer IK073G\Uppgift 4\Group3WebProject\obj\Debug\Group3WebProject.pdb
