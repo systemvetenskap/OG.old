@@ -23,7 +23,6 @@ namespace Group3WebProject
                 alque.DataTextField = "name";
                 alque.DataSource = aa.read(Server.MapPath("~/questions.xml"));
                 Debug.WriteLine(aa.read(Server.MapPath("~/questions.xml")).Rows.Count.ToString());
-
                 alque.DataBind();
                 if (alque.Items.Count > 0)
                 {
@@ -42,9 +41,7 @@ namespace Group3WebProject
                     btnPrevious.Enabled = false;
                     queston.Enabled = false;
                     alque.Enabled = false;
-                }
-
-                
+                }                
             }
             else
             {
@@ -72,9 +69,17 @@ namespace Group3WebProject
         private void checkedRadion()//Vilken som redan är vald och då checkar den i uppstarten 
         {
             Classes.clsRightOrNot cls = new Classes.clsRightOrNot();
-            Label2.Text = cls.allReadyCheckd(alque.SelectedValue.ToString(), testID);
-            queston.SelectedValue = cls.allReadyCheckd(alque.SelectedValue.ToString(), testID);
+            string strVal = cls.allReadyCheckd(alque.SelectedValue.ToString(), testID);
+            Label2.Text = strVal;
+            int val = 0;
+            if (int.TryParse(strVal, out val))
+            {
+                queston.SelectedValue = val.ToString();
+            }
+            else
+            {
 
+            }
         }
 
         private bool checkAnswers(RadioButtonList aa)//Sparar svars alternativen
