@@ -35,10 +35,10 @@ namespace Group3WebProject.Classes
                             }
                             break;
                         case "txt":
-                            quest = reader.ReadString();
+                            quest = reader.ReadString(); //Frågan 
                             break;
-                        case "qone":
-                            dt.Rows.Add();
+                        case "qone": 
+                            dt.Rows.Add();//Nedan är svarsalternativen 
                             dt.Rows[dt.Rows.Count - 1]["id"] = reader.GetAttribute("id").ToUpper();
                             dt.Rows[dt.Rows.Count - 1]["name"] = reader.ReadString();
                             break;
