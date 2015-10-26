@@ -22,7 +22,7 @@ namespace Group3WebProject
                 cmbChooseQue.DataValueField = "id";
                 cmbChooseQue.DataTextField = "name";
                 cmbChooseQue.DataSource = aa.read(Server.MapPath("~/questions.xml"));
-                Debug.WriteLine(aa.read(Server.MapPath("~/questions.xml")).Rows.Count.ToString());
+                //Debug.WriteLine(aa.read(Server.MapPath("~/questions.xml")).Rows.Count.ToString());
                 cmbChooseQue.DataBind();
                 if (cmbChooseQue.Items.Count > 0)
                 {
@@ -66,7 +66,7 @@ namespace Group3WebProject
             {
                 rbQuestionList.DataTextField = "name";
                 rbQuestionList.DataValueField = "id";
-                rbQuestionList.DataSource = clFill.readXML(rbQuestionList.SelectedValue.ToString(), Server.MapPath("~/questions.xml"));
+                rbQuestionList.DataSource = clFill.readXML(cmbChooseQue.SelectedValue.ToString(), Server.MapPath("~/questions.xml"));
                 rbQuestionList.DataBind();
             }
             catch (Exception ex)
