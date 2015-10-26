@@ -18,10 +18,10 @@ namespace Group3WebProject
                 Debug.WriteLine("Startat");
 
               //  Classes.clsFillMenu aa = new Classes.clsFillMenu();
-                Classes.clsTestMenuFill aa = new Classes.clsTestMenuFill();
+                Classes.clsTestMenuFill clMenFill = new Classes.clsTestMenuFill();
                 cmbChooseQue.DataValueField = "id";
                 cmbChooseQue.DataTextField = "name";
-                cmbChooseQue.DataSource = aa.read(Server.MapPath("~/questions.xml"));
+                cmbChooseQue.DataSource = clMenFill.read(Server.MapPath("~/questions.xml"));
                 //Debug.WriteLine(aa.read(Server.MapPath("~/questions.xml")).Rows.Count.ToString());
                 cmbChooseQue.DataBind();
                 if (cmbChooseQue.Items.Count > 0)
@@ -55,13 +55,8 @@ namespace Group3WebProject
         }
         private bool fillquestion()//Hämtar frågorna 
         {
-            checkAnswers(rbQuestionList);
-           // string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-       
-            Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();
-           // return clFill.readXML(questionID, Server.MapPath("~/questions.xml"));
-     
-            
+            checkAnswers(rbQuestionList);         
+            Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();         
             try
             {
                 rbQuestionList.DataTextField = "name";
