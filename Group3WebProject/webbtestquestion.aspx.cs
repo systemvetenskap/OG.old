@@ -55,7 +55,6 @@ namespace Group3WebProject
         }
         private bool fillquestion()//Hämtar frågorna 
         {
-            checkAnswers(rbQuestionList);         
             Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();         
             try
             {
@@ -100,7 +99,9 @@ namespace Group3WebProject
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
+                return false;
             }
+            
             return true;
         }
       
@@ -111,28 +112,37 @@ namespace Group3WebProject
         protected void btnNext_Click(object sender, EventArgs e)
         {
             // Label1.Text = ViewState["alfred"].ToString();
-            fillquestion();
+            checkAnswers(rbQuestionList);         
+
             ViewState["alfred"] = cmbChooseQue.SelectedValue.ToString();
             if (cmbChooseQue.Items.Count > cmbChooseQue.SelectedIndex + 1)
             {
                 cmbChooseQue.SelectedIndex = cmbChooseQue.SelectedIndex + 1;
             }
+            fillquestion();
+
             checkedRadion();
         }
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
-            fillquestion();
+            checkAnswers(rbQuestionList);         
+
             ViewState["alfred"] = cmbChooseQue.SelectedItem.ToString();
             if (cmbChooseQue.Items.Count > cmbChooseQue.SelectedIndex - 1)
             {
                 cmbChooseQue.SelectedIndex = cmbChooseQue.SelectedIndex - 1;
             }
+            fillquestion();
+
             checkedRadion();
         }
         protected void cmbChooseQue_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fillquestion();
+            checkAnswers(rbQuestionList);         
+
             ViewState["alfred"] = cmbChooseQue.SelectedItem.ToString();
+            fillquestion();
+
             checkedRadion();
         }
     }
