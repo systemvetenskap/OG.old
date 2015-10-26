@@ -100,8 +100,8 @@ namespace Group3WebProject
         }
         private DataTable fillQuestions(string questionID)//Bara en nästling som går att flytta bort 
         {
-            Classes.clsFillQuestion aa = new Classes.clsFillQuestion();
-            return aa.readXML(questionID, Server.MapPath("~/questions.xml"));
+            Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();
+            return clFill.readXML(questionID, Server.MapPath("~/questions.xml"));
         }
         protected void queston_Unload(object sender, EventArgs e)
         {
