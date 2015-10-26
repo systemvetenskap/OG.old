@@ -19,14 +19,14 @@ namespace Group3WebProject
 
               //  Classes.clsFillMenu aa = new Classes.clsFillMenu();
                 Classes.clsTestMenuFill aa = new Classes.clsTestMenuFill();
-                alque.DataValueField = "id";
-                alque.DataTextField = "name";
-                alque.DataSource = aa.read(Server.MapPath("~/questions.xml"));
+                cmbChooseQue.DataValueField = "id";
+                cmbChooseQue.DataTextField = "name";
+                cmbChooseQue.DataSource = aa.read(Server.MapPath("~/questions.xml"));
                 Debug.WriteLine(aa.read(Server.MapPath("~/questions.xml")).Rows.Count.ToString());
-                alque.DataBind();
-                if (alque.Items.Count > 0)
+                cmbChooseQue.DataBind();
+                if (cmbChooseQue.Items.Count > 0)
                 {
-                    ViewState["alfred"] = alque.SelectedItem.ToString();
+                    ViewState["alfred"] = cmbChooseQue.SelectedItem.ToString();
                     fillquestion();
                     checkedRadion();
                 }
@@ -36,8 +36,8 @@ namespace Group3WebProject
                     Button1.Enabled = false;
                     btnNext.Enabled = false;
                     btnPrevious.Enabled = false;
-                    queston.Enabled = false;
-                    alque.Enabled = false;
+                    rbQuestionList.Enabled = false;
+                    cmbChooseQue.Enabled = false;
                 }                
             }
             else
@@ -48,34 +48,43 @@ namespace Group3WebProject
         protected void Button1_Click(object sender, EventArgs e)
         {
             fillquestion();
-            ViewState["alfred"] = alque.SelectedValue.ToString();
+            ViewState["alfred"] = cmbChooseQue.SelectedValue.ToString();
             Classes.clsRightOrNot cls = new Classes.clsRightOrNot();
-            Label2.Text = cls.allReadyCheckd(alque.SelectedValue.ToString(), testID);
+            Label2.Text = cls.allReadyCheckd(cmbChooseQue.SelectedValue.ToString(), testID);
 
         }
         private bool fillquestion()//Hämtar frågorna 
         {
-            checkAnswers(queston);
+            checkAnswers(rbQuestionList);
            // string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
        
             Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();
            // return clFill.readXML(questionID, Server.MapPath("~/questions.xml"));
      
-            queston.DataTextField = "name";
-            queston.DataValueField = "id";
-            queston.DataSource = clFill.readXML(queston.SelectedValue.ToString(), Server.MapPath("~/questions.xml"));
-            queston.DataBind();
+            
+            try
+            {
+                rbQuestionList.DataTextField = "name";
+                rbQuestionList.DataValueField = "id";
+                rbQuestionList.DataSource = clFill.readXML(rbQuestionList.SelectedValue.ToString(), Server.MapPath("~/questions.xml"));
+                rbQuestionList.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Label1.Text = ex.ToString();
+            }
+            
             return true;
         }
         private void checkedRadion()//Vilken som redan är vald och då checkar den i uppstarten 
         {
             Classes.clsRightOrNot cls = new Classes.clsRightOrNot();
-            string strVal = cls.allReadyCheckd(alque.SelectedValue.ToString(), testID);
+            string strVal = cls.allReadyCheckd(cmbChooseQue.SelectedValue.ToString(), testID);
             Label2.Text = strVal;
             int val = 0;
             if (int.TryParse(strVal, out val))
             {
-                queston.SelectedValue = val.ToString();
+                rbQuestionList.SelectedValue = val.ToString();
             }
             else
             {
@@ -90,7 +99,7 @@ namespace Group3WebProject
                 Classes.clsRightOrNot cls = new Classes.clsRightOrNot();
                 if (aa.SelectedIndex > 0)
                 {
-                    Label3.Text = cls.saveAnswers(alque.SelectedValue.ToString(), aa.SelectedValue.ToString(), testID);
+                    Label3.Text = cls.saveAnswers(cmbChooseQue.SelectedValue.ToString(), aa.SelectedValue.ToString(), testID);
                 }
             }
             catch (Exception ex)
@@ -100,7 +109,7 @@ namespace Group3WebProject
             return true;
         }
       
-        protected void queston_Unload(object sender, EventArgs e)
+        protected void rbQuestionList_Unload(object sender, EventArgs e)
         {
 
         }
@@ -108,27 +117,27 @@ namespace Group3WebProject
         {
             // Label1.Text = ViewState["alfred"].ToString();
             fillquestion();
-            ViewState["alfred"] = alque.SelectedValue.ToString();
-            if (alque.Items.Count > alque.SelectedIndex + 1)
+            ViewState["alfred"] = cmbChooseQue.SelectedValue.ToString();
+            if (cmbChooseQue.Items.Count > cmbChooseQue.SelectedIndex + 1)
             {
-                alque.SelectedIndex = alque.SelectedIndex + 1;
+                cmbChooseQue.SelectedIndex = cmbChooseQue.SelectedIndex + 1;
             }
             checkedRadion();
         }
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
             fillquestion();
-            ViewState["alfred"] = alque.SelectedItem.ToString();
-            if (alque.Items.Count > alque.SelectedIndex - 1)
+            ViewState["alfred"] = cmbChooseQue.SelectedItem.ToString();
+            if (cmbChooseQue.Items.Count > cmbChooseQue.SelectedIndex - 1)
             {
-                alque.SelectedIndex = alque.SelectedIndex - 1;
+                cmbChooseQue.SelectedIndex = cmbChooseQue.SelectedIndex - 1;
             }
             checkedRadion();
         }
-        protected void alque_SelectedIndexChanged(object sender, EventArgs e)
+        protected void cmbChooseQue_SelectedIndexChanged(object sender, EventArgs e)
         {
             fillquestion();
-            ViewState["alfred"] = alque.SelectedItem.ToString();
+            ViewState["alfred"] = cmbChooseQue.SelectedItem.ToString();
             checkedRadion();
         }
     }

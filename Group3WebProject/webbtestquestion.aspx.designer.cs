@@ -22,13 +22,13 @@ namespace Group3WebProject {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// alque control.
+        /// cmbChooseQue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList alque;
+        protected global::System.Web.UI.WebControls.DropDownList cmbChooseQue;
         
         /// <summary>
         /// Button1 control.
@@ -58,13 +58,13 @@ namespace Group3WebProject {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// queston control.
+        /// rbQuestionList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList queston;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbQuestionList;
         
         /// <summary>
         /// btnPrevious control.
