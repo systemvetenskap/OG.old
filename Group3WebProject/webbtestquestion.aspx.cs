@@ -16,6 +16,13 @@ namespace Group3WebProject
             if (!IsPostBack)
             {
                 Debug.WriteLine("Startat");
+                Classes.clsSetGetStarttime clSetStart = new Classes.clsSetGetStarttime();
+                HttpCookie myCookie = clSetStart.getStart();
+               if (myCookie == null)
+               {
+                   Response.Cookies.Add(myCookie);
+               }
+                
 
               //  Classes.clsFillMenu aa = new Classes.clsFillMenu();
                 Classes.clsTestMenuFill clMenFill = new Classes.clsTestMenuFill();
