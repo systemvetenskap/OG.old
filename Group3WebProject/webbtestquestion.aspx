@@ -8,7 +8,7 @@
         <p>Obs tiden startas då du trycker på start </p>
     </div>
     <div>
-        <asp:Label ID="Label1" runat="server" Text="Label">Välj fråga: </asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Label">Välj frågor: </asp:Label>
         <asp:DropDownList ID="cmbChooseQue" runat="server" CssClass="dropdown-toggle" OnSelectedIndexChanged="cmbChooseQue_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Spara" CssClass="btn-primary" />
     </div>
