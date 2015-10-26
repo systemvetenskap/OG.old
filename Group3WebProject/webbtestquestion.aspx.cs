@@ -27,10 +27,7 @@ namespace Group3WebProject
                 if (alque.Items.Count > 0)
                 {
                     ViewState["alfred"] = alque.SelectedItem.ToString();
-                    queston.DataTextField = "name";
-                    queston.DataValueField = "id";
-                    queston.DataSource = fillQuestions(alque.SelectedValue); ;
-                    queston.DataBind();
+                    fillquestion();
                     checkedRadion();
                 }
                 else
@@ -50,19 +47,23 @@ namespace Group3WebProject
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            ala();
+            fillquestion();
             ViewState["alfred"] = alque.SelectedValue.ToString();
             Classes.clsRightOrNot cls = new Classes.clsRightOrNot();
             Label2.Text = cls.allReadyCheckd(alque.SelectedValue.ToString(), testID);
 
         }
-        private bool ala()//Hämtar frågorna 
+        private bool fillquestion()//Hämtar frågorna 
         {
             checkAnswers(queston);
-            string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+           // string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+       
+            Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();
+           // return clFill.readXML(questionID, Server.MapPath("~/questions.xml"));
+     
             queston.DataTextField = "name";
             queston.DataValueField = "id";
-            queston.DataSource = fillQuestions(alque.SelectedValue); ;
+            queston.DataSource = clFill.readXML(queston.SelectedValue.ToString(), Server.MapPath("~/questions.xml"));
             queston.DataBind();
             return true;
         }
@@ -98,11 +99,7 @@ namespace Group3WebProject
             }
             return true;
         }
-        private DataTable fillQuestions(string questionID)//Bara en nästling som går att flytta bort 
-        {
-            Classes.clsFillQuestion clFill = new Classes.clsFillQuestion();
-            return clFill.readXML(questionID, Server.MapPath("~/questions.xml"));
-        }
+      
         protected void queston_Unload(object sender, EventArgs e)
         {
 
@@ -110,7 +107,7 @@ namespace Group3WebProject
         protected void btnNext_Click(object sender, EventArgs e)
         {
             // Label1.Text = ViewState["alfred"].ToString();
-            ala();
+            fillquestion();
             ViewState["alfred"] = alque.SelectedValue.ToString();
             if (alque.Items.Count > alque.SelectedIndex + 1)
             {
@@ -120,7 +117,7 @@ namespace Group3WebProject
         }
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
-            ala();
+            fillquestion();
             ViewState["alfred"] = alque.SelectedItem.ToString();
             if (alque.Items.Count > alque.SelectedIndex - 1)
             {
@@ -130,7 +127,7 @@ namespace Group3WebProject
         }
         protected void alque_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ala();
+            fillquestion();
             ViewState["alfred"] = alque.SelectedItem.ToString();
             checkedRadion();
         }
