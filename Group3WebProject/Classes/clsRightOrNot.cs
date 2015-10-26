@@ -68,7 +68,7 @@ namespace Group3WebProject.Classes
             catch (Exception ex)
             {
                 
-                return "false";
+                return ex.ToString();
             }
 
         }
