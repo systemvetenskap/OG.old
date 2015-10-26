@@ -16,3 +16,5 @@ C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift
 C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Group3WebProject.dll
 C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Group3WebProject.pdb
 C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\obj\Debug\Group3WebProject.pdb
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Npgsql.dll
+C:\Users\Administratör\Documents\MIUN\009 Interaktiva webbapplikationer\Uppgift 4\OG\Group3WebProject\bin\Npgsql.xml
