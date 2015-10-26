@@ -13,8 +13,8 @@ namespace Group3WebProject.Classes
         {
             Debug.WriteLine("Nu har vi kommit in ");
             DataTable dt = new DataTable();
-            dt.Columns.Add("name");
-            dt.Columns.Add("id");
+            dt.Columns.Add("name"); //Fråga 1, Fråga 2---
+            dt.Columns.Add("id"); //Fråge id:et 
             try
             {
                 XmlTextReader reader = new XmlTextReader(xmlPath);
@@ -35,7 +35,7 @@ namespace Group3WebProject.Classes
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.ToString());
-            }
+            }            
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 dt.Rows[i]["name"] = "Fråga " + (i + 1).ToString();

@@ -35,7 +35,7 @@ namespace Group3WebProject.Classes
                             }
                             break;
                         case "txt":
-                            quest = reader.ReadString(); //Frågan 
+                            quest = reader.ReadString(); //Frågan sparas till en string behöver ha en tupple
                             break;
                         case "qone": 
                             dt.Rows.Add();//Nedan är svarsalternativen 
@@ -65,8 +65,6 @@ namespace Group3WebProject.Classes
                 Debug.WriteLine(ex.ToString());
                 return null;
             }
-
-
             return dt;
         }
     }
